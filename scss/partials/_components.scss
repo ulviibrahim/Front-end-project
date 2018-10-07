@@ -1,0 +1,236 @@
+// Button
+%u-btn{
+    display: inline-block;
+    text-align: center;
+    padding: 5px 19px;
+    border-radius: 27px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+
+
+.apply_b{
+    @extend %u-btn;
+    background-color: none;
+    border-radius: 5px;
+    size: 10px;
+    @include setTransitions(all,0.5s);
+    background: $primary-color;  
+    color: $white-color; 
+    padding: 15px 25px;
+    &:hover{
+        text-decoration: none;
+    color: $white-color;
+    background: $color-black; 
+
+    }
+}
+.know{
+    @extend %u-btn;
+    background-color: none;
+    size: 10px;
+    @include setTransitions(all,0.5s);
+    background: $primary-color;  
+    color: $white-color; 
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    &:hover{
+        text-decoration: none;
+    color: $color-black;
+    background: $white-color; 
+
+    }
+}
+.know3{
+    @extend %u-btn;
+    border-radius: 2px;
+    padding: 10px 30px;
+    background-color: none;
+    size: 10px;
+    @include setTransitions(all,0.3s);
+    background: $primary-color;  
+    color: $white-color; 
+    border-radius: 1px;
+    font-weight: bold;
+    &:hover{
+        text-decoration: none;
+    color: $color-black;
+    background: $white-color; 
+    box-shadow: 1px 1px 8px  $white-color
+
+    }
+}
+.know2{
+    @extend %u-btn;
+    background-color: none;
+    size: 10px;
+    @include setTransitions(all,0.5s);
+    background: $primary-color;  
+    color: $white-color; 
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    &:hover{
+        text-decoration: none;
+    color: $white-color;
+    background: $color-black; 
+
+    }
+}
+%icons_s{
+    
+   font-size: $text-size+5;
+    padding: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid $primary-color;
+   
+    color: $primary-color;
+    margin-bottom: $text-size;
+
+}
+
+.services_fas{
+    @extend %icons_s;
+
+}
+
+.number_fas{
+    @extend %icons_s;
+    color: $secondary-color;
+    border: none;  
+   font-size: $title-size;
+
+}
+%a_after{
+    
+ color: #323232;
+                          
+                           text-align: center;
+                           font-weight: bold;
+                           @include setTransitions(all,0.7s);
+                           font-size: $text-size/1.2;
+                               .fa-check{
+                               display: none;
+                                                
+                        }
+                           &:hover{
+                               text-decoration: none;
+                               color: $primary-color;
+                               .fa-long-arrow-alt-right{
+                                   display: none;
+                               }
+                               .fa-check{
+                                   display: inherit;
+
+                               }
+
+
+                           }
+
+                        }
+
+.link_know{
+    @extend %a_after;
+}                       
+
+
+
+%after{
+    display: flex;
+                        justify-content: center;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                        bottom: -20px;
+                        
+                        text-align: center;
+                            width: 40px;
+                            height: 2px;
+                            background-color: $primary-color; 
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                        bottom: -15px;
+                        
+                        text-align: center;
+                            width: 80px;
+                            height: 2px;
+                            background-color: $primary-color;
+                            
+                        }
+                        }
+.after_line{
+  @extend %after;
+ }  
+
+
+
+%round_span{
+    span{
+        width:  100px;
+        height: 100px; 
+        line-height: 100px;                      
+       text-align: center;
+        margin-top: 10px;
+        font-size: $title-size+5;
+        background-color: #f2f7fb;
+        border-radius: 100%;
+        color:$primary-color;
+        position: relative;
+        &:hover::after{
+            transform: scale(1.2);
+            border-color: #f2f7fb;
+        }
+        &::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius:100%;
+            border: 4px solid $white-color;
+        @include setTransitions(all, 0.4s);
+            position: absolute;
+            top:0;
+            left:0;
+            
+        }
+    }
+}
+
+.rounded_icon{
+    @extend %round_span;
+    span{
+        background-color: $white-color;
+
+    }
+    
+    
+
+}
+
+
+.btn-about{
+    margin-top: 8px;
+    display:inline-block;
+    text-align: center;
+    padding: 13px 30px;
+    border-radius: 27px;
+    color: $secondary-color;
+    font-weight: 700;
+    background: $primary-color;
+    @include setTransitions(all,0.5s);
+    &:hover{
+        text-decoration: none;
+    color: $secondary-color;
+
+    }
+
+}
+
+
